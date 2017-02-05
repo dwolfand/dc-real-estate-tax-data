@@ -23,7 +23,7 @@ func CsvIze() {
 	files, err := ioutil.ReadDir("results")
 	check(err)
 
-	writer.Write([]string{"ssl", "address", "owner", "neighborhood", "sub_neighborhood", "use_code", "2014_assessment"})
+	writer.Write([]string{"ssl", "address", "owner", "neighborhood", "sub_neighborhood", "use_code", "sale_price", "recordation_date", "2016_Assessment"})
 
 	for _, name := range files {
 		fmt.Printf("scanning %s\n", name.Name())
@@ -35,7 +35,7 @@ func CsvIze() {
 			if i == 3 {
 				s.Find("tr").Each(func(j int, row *goquery.Selection) {
 					var tds = row.Find("td")
-					if tds.Length() == 7 {
+					if tds.Length() == 9 {
 						var cells []string
 						tds.Each(func(k int, td *goquery.Selection) {
 							cells = append(cells, strings.TrimSpace(td.Text()))
