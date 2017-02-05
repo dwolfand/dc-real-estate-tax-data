@@ -9,7 +9,7 @@ def iterate(page, ward, page_number)
     File.open("results/%02d-%08d.html" % [ward, page_number], 'w') do |f|
       f.write(result.body)
     end
-    sleep(2)
+    sleep(1)
     iterate(result, ward, page_number + 1)
   end
 end
@@ -32,6 +32,6 @@ def get_ward(ward)
 end
 
 
-for ward in 2..8 do
+for ward in 1..8 do
   get_ward(ward.to_s)
 end
