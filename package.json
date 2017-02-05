@@ -1,5 +1,5 @@
 {
-  "name": "dc-ownership",
+  "name": "dc-real-estate-tax-data",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "csv-parser": "^1.5.0"
+    "bluebird": "^3.4.7",
+    "cheerio": "^0.22.0",
+    "csv-parser": "^1.5.0",
+    "request": "^2.79.0",
+    "sync-request": "^4.0.1"
   }
 }
